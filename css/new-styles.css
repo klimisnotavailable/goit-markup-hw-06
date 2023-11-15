@@ -131,7 +131,7 @@ p {
 
 /* styles */
 
-/* ===== MOBILE STTLES ===== */
+/* ========== MOBILE STYLES ========== */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -172,16 +172,25 @@ p {
 .section {
   padding-top: 96px;
   padding-bottom: 96px;
-  padding-right: 16px;
-  padding-left: 16px;
-}
-
-.container {
-  max-width: 288px;
   margin: 0 auto;
 }
 
-/* HEADER */
+.container {
+  margin: 0 auto;
+  max-width: 288px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*    HEADER    */
 
 .page-header {
   border-bottom: 1px solid #e7e9fc;
@@ -191,8 +200,9 @@ p {
 
 .page-header-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: baseline;
+
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -211,28 +221,18 @@ p {
   color: var(--logo-primary);
 }
 
-.navigation-list {
-  display: none;
-}
-
-.header-address {
-  display: none;
-}
-
-/* MOBILE MENU */
-
 .mobile-menu-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 24px;
   height: 24px;
+  padding: 4.8px 3.6px;
 
   background: transparent;
   fill: #000;
 
   line-height: 0;
 }
+
+/* mobile menu */
 
 .mobile-menu {
   position: fixed;
@@ -307,7 +307,7 @@ p {
   fill: var(--background-white);
 }
 
-/* MOBILE NAVIGATION */
+/* mobile navigation */
 
 .mobile-navigation-list {
   display: flex;
@@ -331,7 +331,7 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* MOBILE ADDRESS */
+/* mobile address */
 
 .mobile-address {
   margin-bottom: 48px;
@@ -400,7 +400,18 @@ p {
   background-color: var(--social-link-hover);
 }
 
-/* HERO SECTION */
+.navigation-list {
+  display: none;
+}
+
+.address-list {
+  display: none;
+}
+
+/* hero section */
+.hero-section {
+  margin: 0 auto;
+}
 
 .hero-section {
   margin: 0 auto;
@@ -473,7 +484,7 @@ p {
   background-color: var(--button-active);
 }
 
-/* BENEFITS */
+/* benefits section */
 
 .benefits-list {
   display: flex;
@@ -505,7 +516,7 @@ p {
   font-weight: 500;
 }
 
-/* MASTERS SECTION */
+/* masters section */
 
 .master-section {
   background-color: #f4f4f4;
@@ -592,7 +603,7 @@ p {
   background-color: var(--social-link-hover);
 }
 
-/* PORTFOLIO SECTION */
+/* POTFOLIO */
 
 .portfolio-section-title {
   margin-bottom: 72px;
@@ -655,12 +666,11 @@ p {
 }
 
 .project-title {
-  margin-bottom: 8px;
-
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
   color: var(--title-dark);
 }
 
@@ -668,6 +678,7 @@ p {
 
 .footer {
   text-align: center;
+
   background-color: var(--background-dark);
 }
 
@@ -736,15 +747,15 @@ p {
 
 /* SUBSCRIBE FORM */
 
-.form-subscribe-container {
-  width: 100%;
-}
-
 .form-title-footer {
   margin-bottom: 16px;
 
   font-weight: 500;
   color: var(--text-white);
+}
+
+.form-subscribe-container {
+  width: 100%;
 }
 
 .form-subscribe {
@@ -1093,27 +1104,29 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  /* ===== TABLET STYLES ===== */
-
+  /* ========== TABLET STYLES ========== */
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 
-  /* HEADER */
-
   .page-header-container {
-    align-items: center;
     padding-top: 0px;
     padding-bottom: 0px;
   }
+  /* HEADER */
 
   .mobile-menu-button {
     display: none;
   }
 
+  .logo-header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
   .navigation {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 120px;
   }
 
@@ -1124,12 +1137,6 @@ p {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
-  }
-
-  .header-address {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
   }
 
   .navigation-link {
@@ -1166,6 +1173,11 @@ p {
     color: var(--navigation-link-focus);
   }
 
+  .address-list {
+    display: flex;
+    flex-direction: column;
+  }
+
   .address-link {
     padding: 24px 0;
 
@@ -1188,12 +1200,7 @@ p {
     color: var(--address-link-focus);
   }
 
-  /* HERO SECTION */
-
   .hero-section {
-    padding-top: 112px;
-    padding-bottom: 112px;
-
     background-image: url(../images/backgrounds/hero-section-background-tablet.jpg);
   }
 
@@ -1209,42 +1216,52 @@ p {
   }
 
   .page-title {
-    max-width: 496px;
-    margin-bottom: 36px;
+    margin: 0 auto;
+    margin-bottom: 72px;
+
     font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    max-width: 496px;
+
+    color: var(--text-white);
   }
 
-  /* BENEFITS SECTION */
+  /* BENEFITS */
+
   .benefits-list {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    row-gap: 72px;
     column-gap: 24px;
   }
 
   .benefit-item {
-    width: 356px;
-  }
-
-  .benefit {
+    flex-basis: calc((100% - 24px) / 2);
     text-align: left;
   }
 
-  /* MASTERS SECTION */
+  /* MASTERS */
 
   .masters-list {
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 64px;
   }
 
-  /* PORTFOLIO SECTION */
+  /* PORTFOLIO */
 
   .portfolio {
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     column-gap: 24px;
-    row-gap: 72px;
+    row-gap: 64px;
   }
 
   .portfolio-item {
@@ -1259,42 +1276,40 @@ p {
   }
 
   .footer-container {
-    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: baseline;
     column-gap: 24px;
+    row-gap: 64px;
   }
 
-  .footer-logo-container {
-    width: 264px;
-  }
-
-  .footer-logo {
+  .footer-socials-container {
     text-align: left;
   }
 
-  .form-subscribe-container {
-    width: auto;
-  }
-
-  .form-subscribe {
-    flex-direction: row;
-    gap: 24px;
+  .footer-logo-container {
+    text-align: left;
+    width: 264px;
   }
 
   .form-title-footer {
     text-align: left;
   }
 
-  .subscribe-label {
-    width: 264px;
+  .form-subscribe-container {
+    width: 453px;
   }
 
-  .subscribe-button {
-    margin: 0;
+  .form-subscribe {
+    flex-direction: row;
+  }
+
+  .subscribe-label {
+    width: 453px;
   }
 
   /* MODAL WINDOW */
+
   .service-form-container {
     width: 408px;
   }
@@ -1306,34 +1321,8 @@ p {
 
 @media screen and (min-width: 1158px) {
   /* ===== DESKTOP STYLES ===== */
-  .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  .container {
-    max-width: 1158px;
-  }
 
   /* HEADER */
-
-  .page-header-container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
-  .navigation {
-    gap: 76px;
-  }
-
-  .header-address {
-    display: inline-block;
-  }
-
-  .address-list {
-    display: flex;
-    gap: 40px;
-  }
 
   /* HERO SECTION */
 
@@ -1361,11 +1350,6 @@ p {
 
   /* BENEFITS SECTION */
 
-  .benefits-list {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
   .icon-container {
     display: flex;
     justify-content: center;
@@ -1378,44 +1362,5 @@ p {
     margin-bottom: 8px;
   }
 
-  .benefit {
-    font-size: 20px;
-    font-weight: 500;
-  }
-  .benefit-text {
-    font-weight: 400;
-  }
-
-  /* MASTERS SECTION */
-
-  .masters-list {
-    flex-wrap: nowrap;
-    gap: 24px;
-  }
-
   /* FOOTER */
-
-  .footer-container {
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    gap: 0px;
-  }
-
-  .footer-logo-container {
-    margin-right: 120px;
-  }
-
-  .footer-text {
-    width: 264px;
-  }
-
-  .footer-socials-container {
-    margin-right: 80px;
-  }
-
-  /* MODAL WINDOW */
-
-  .service-form-container {
-    width: 408px;
-  }
 }
