@@ -1338,6 +1338,8 @@ p {
   /* HERO SECTION */
 
   .hero-section {
+    padding-top: 188px;
+    padding-bottom: 188px;
     background-color: var(--title-dark);
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -1417,5 +1419,10 @@ p {
 
   .service-form-container {
     width: 408px;
+  }
+
+  .form-subscribe-input,
+  .form-subscribe-input::placeholder {
+    opacity: 1;
   }
 }
