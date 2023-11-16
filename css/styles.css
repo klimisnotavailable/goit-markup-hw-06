@@ -172,12 +172,13 @@ p {
 .section {
   padding-top: 96px;
   padding-bottom: 96px;
-  padding-right: 16px;
-  padding-left: 16px;
 }
 
 .container {
-  max-width: 288px;
+  max-width: 1558px;
+  padding-right: 16px;
+  padding-left: 16px;
+
   margin: 0 auto;
 }
 
@@ -229,9 +230,12 @@ p {
   height: 24px;
 
   background: transparent;
-  fill: #000;
 
   line-height: 0;
+}
+
+.mobile-menu-icon {
+  fill: #000;
 }
 
 .mobile-menu {
@@ -1095,10 +1099,6 @@ p {
 @media screen and (min-width: 768px) {
   /* ===== TABLET STYLES ===== */
 
-  .container {
-    max-width: 736px;
-  }
-
   /* HEADER */
 
   .page-header-container {
@@ -1215,14 +1215,18 @@ p {
   }
 
   /* BENEFITS SECTION */
+
   .benefits-list {
+    margin: 0 auto;
+    max-width: 768px;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
   }
 
   .benefit-item {
-    width: 356px;
+    max-width: 346px;
   }
 
   .benefit {
@@ -1232,9 +1236,13 @@ p {
   /* MASTERS SECTION */
 
   .masters-list {
+    width: 552px;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0 auto;
+    column-gap: 24px;
+    row-gap: 64px;
   }
 
   /* PORTFOLIO SECTION */
