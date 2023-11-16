@@ -268,7 +268,7 @@ p {
   width: 280px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .mobile-menu-container {
     margin: 0 auto;
   }
