@@ -704,7 +704,7 @@ p {
 .footer-socials-text {
   margin-bottom: 16px;
 
-  text-align: center;
+  text-align: inherit;
   color: var(--text-white);
   font-weight: 500;
 }
@@ -1276,6 +1276,7 @@ p {
   /* FOOTER */
 
   .footer-container {
+    text-align: left;
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
@@ -1285,11 +1286,9 @@ p {
 
   .footer-logo-container {
     width: 264px;
-    text-align: left;
   }
 
   .footer-socials-text {
-    text-align: left;
   }
 
   .form-subscribe-container {
@@ -1302,7 +1301,6 @@ p {
   }
 
   .form-title-footer {
-    text-align: left;
   }
 
   .subscribe-label {
@@ -1326,13 +1324,15 @@ p {
 @media screen and (min-width: 1158px) {
   /* ===== DESKTOP STYLES ===== */
   .section {
-    max-width: 1440px;
+    /* max-width: 1440px; */
 
     padding-top: 120px;
     padding-bottom: 120px;
   }
 
   .container {
+    margin: 0 auto;
+
     max-width: 1158px;
   }
 
